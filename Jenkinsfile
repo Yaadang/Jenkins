@@ -1,6 +1,12 @@
 pipeline   {
 
     agent any
+    parameters{
+        string(name: 'VERSION', defaultvalue: '', description: 'version to deploy on prod')
+    }
+    tools{
+        maven 'Maven'
+    }
 
     stages {
         stage("build"){
@@ -11,7 +17,6 @@ pipeline   {
         }
         
         stage("test"){
-
             steps{
                 echo "we in da test phase"
             }
@@ -21,6 +26,7 @@ pipeline   {
 
             steps{
                 echo "we in da deploy phase"
+                echo "deploying version ${VERSION}"
             }
         }
     }
