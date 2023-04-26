@@ -2,7 +2,7 @@ pipeline   {
 
     agent any
     parameters{
-        string(name: 'VERSION', defaultvalue: '', description: 'version to deploy on prod')
+        string(name: 'VERSION', defaultValue: '', description: 'version to deploy on prod')
     }
     tools{
         maven 'Maven'
