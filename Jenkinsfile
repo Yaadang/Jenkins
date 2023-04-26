@@ -29,9 +29,14 @@ pipeline   {
             }
         }
         stage("deploy"){
-
+            when{
+                expression{
+                    BRANCH_NAME=='multi-branch-triggers'                  
+                }
+            }    
             steps{
                 script{
+                    echo "we are deploying from the 2nd branch"
                     gv.deploy()
                 }
             }
