@@ -5,7 +5,7 @@ pipeline   {
         string(name: 'VERSION', defaultValue: '', description: 'version to deploy on prod')
     }
     tools{
-        maven 'Maven'
+        maven 'maven-3.6'
     }
 
     stages {
