@@ -26,7 +26,7 @@ pipeline   {
 
             steps{
                 echo "we in da deploy phase"
-                echo "deploying version ${VERSION}"
+                echo "deploying version ${params.VERSION}"
             }
         }
     }
