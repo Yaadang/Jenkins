@@ -1,3 +1,4 @@
+/*
 def buildApp(){
     echo "building the application"
     sh 'mvn package'
@@ -11,6 +12,7 @@ def buildimage() {
         sh 'docker push yaadang/myrepo:jma-2.1-test'
     }
 }
+*/
 def deploy(){
     echo "deploying the application"
 }
