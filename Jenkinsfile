@@ -17,7 +17,7 @@ pipeline   {
 
             steps{
                 script{ 
-                    buildApp "yaadang/myrepo:jmv-v3"
+                    buildApp()
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline   {
 
             steps{
                 script{
-                    buildimage()
+                    buildimage "yaadang/myrepo:jmv-v3"
                 }
             }
         }
