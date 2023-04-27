@@ -44,11 +44,11 @@ pipeline   {
         stage('commit Version Update'){
             steps{
                 scripts{
-                    withCredentials([usernamePassword(credentialsId: 'gitlab-credentials', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+                    withCredentials([usernamePassword(credentialsId: 'ba245a61-f0b0-4e98-abaa-07a439f7b470', passwordVariable: 'PAS', usernameVariable: 'USER')]) {
                         // git config here for the first time run
                         sh 'git config --global user.email "jenkins@example.com"'
                         sh 'git config --global user.name "jenkins"'
-                        sh "git remote set-url origin https://${USER}:${PASS}@https://github.com/Yaadang/Jenkins.git"
+                        sh "git remote set-url origin https://${USER}:${PAS}@https://github.com/Yaadang/Jenkins.git"
                         sh 'git add .'
                         sh 'git commit -m "ci: version bump"'
                         sh 'git push origin HEAD:jenkins-jobs'
