@@ -17,7 +17,7 @@ pipeline   {
 
             steps{
                 script{ 
-                    buildApp("yaadang/myrepo:jmv-v3")
+                    buildApp "yaadang/myrepo:jmv-v3"
                 }
             }
         }
