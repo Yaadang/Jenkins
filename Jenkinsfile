@@ -1,3 +1,4 @@
+@Library('jenkins-shared-library')
 def gv
 pipeline   {
     agent any
@@ -16,7 +17,7 @@ pipeline   {
 
             steps{
                 script{ 
-                    gv.buildApp()
+                    buildApp()
                 }
             }
         }
@@ -24,7 +25,7 @@ pipeline   {
 
             steps{
                 script{
-                    gv.buildimage()
+                    buildimage()
                 }
             }
         }
