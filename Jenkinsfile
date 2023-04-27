@@ -52,7 +52,7 @@ pipeline   {
                         sh 'git add .'
                         sh 'git commit -m "ci: version bump"'
                         sh 'git checkout -b main'
-                        sh 'git push'
+                        sh ' git push --set-upstream origin main'
                    }
                 }
             }
