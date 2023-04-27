@@ -9,6 +9,7 @@ def buildimage() {
         sh 'docker build -t yaadang/myrepo:jma-2.0 .'
         sh "echo $PAS | docker login -u $USER --password-stdin "
         sh 'docker push yaadang/myrepo:jma-2.0'
+        sh echo "is this from the script??"
     }
 }
 
