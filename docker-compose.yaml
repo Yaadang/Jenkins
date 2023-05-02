@@ -3,10 +3,10 @@ services:
     java-maven-app:
       image: yaadang/myrepo:1.1.1-19
       ports:
-        -8080:8080
+        -"8080:8080"
     postgres:
       image: postgres
       ports:
-        - 5432:5432
+        -"5432:5432"
       environment:
         - POSTGRES_PASSWORD=my-pwd
