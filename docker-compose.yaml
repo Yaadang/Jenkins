@@ -1,4 +1,3 @@
-version: 'latest'
 services:
     java-maven-app:
       image: yaadang/myrepo:1.1.1-19
